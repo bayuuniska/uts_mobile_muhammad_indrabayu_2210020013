@@ -5,7 +5,7 @@ class UpdateStatusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Update Status')),
-      body: Center(child: Text('Update your status here.')),
+      body: Center(child: Text('belum ada kodingannya.')),
     );
   }
 }

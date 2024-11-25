@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'screens/login.dart';
-import 'screens/list.dart';
-import 'screens/detail.dart';
+import 'screens/login.dart';  // Import halaman login
+import 'screens/list.dart';  // Import halaman list
+import 'screens/detail.dart';  // Import halaman detail
 import 'screens/home.dart';  // Import halaman Home
 import 'screens/update_status.dart';  // Import halaman Update Status
 import 'screens/search.dart';  // Import halaman Search

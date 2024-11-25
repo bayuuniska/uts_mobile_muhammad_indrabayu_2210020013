@@ -5,7 +5,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Chat')),
-      body: Center(child: Text('Chat with others here.')),
+      body: Center(child: Text('Belum ada kodingannya.')),
     );
   }
 }

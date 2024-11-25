@@ -9,13 +9,13 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Menambahkan logo berita di bagian atas
+            // Menambahkan gambar logo di bagian atas
             Image.asset(
-              'assets/images/logo berita game.png',  // Gantilah dengan path gambar Anda
-              width: 200,  // Atur lebar logo sesuai kebutuhan
-              height: 200, // Atur tinggi logo sesuai kebutuhan
+              'assets/images/logo berita game.png',  // isi dengan nama file gambar di dalam folder images
+              width: 200,  // untuk mengatur lebar logo sesuai kebutuhan
+              height: 200, // untuk mengatur tinggi logo sesuai kebutuhan
             ),
-            SizedBox(height: 10), // Memberikan jarak setelah logo
+            SizedBox(height: 100), // Memberikan jarak setelah logo
             // Menghilangkan teks Login
             TextField(
               decoration: InputDecoration(labelText: 'Username'),

@@ -20,7 +20,7 @@ class DetailScreen extends StatelessWidget {
       appBar: AppBar(title: Text(title)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: SingleChildScrollView(  // Membungkus seluruh konten agar bisa digulir
+        child: SingleChildScrollView(  // Membungkus seluruh konten agar bisa di scroll ke bawah
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
