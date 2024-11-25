@@ -4,14 +4,14 @@ class DetailScreen extends StatelessWidget {
   final String title;
   final String content;
   final String image;
-  final String author;  // Menambahkan parameter author
+  final String author; // Menambahkan parameter author
 
   // Konstruktor untuk menerima data dari ListScreen
   DetailScreen({
     required this.title,
     required this.content,
     required this.image,
-    required this.author,  // Menambahkan author di konstruktor
+    required this.author, // Menambahkan author di konstruktor
   });
 
   @override
@@ -19,8 +19,9 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: SingleChildScrollView(  // Membungkus seluruh konten agar bisa di scroll ke bawah
+        padding: const EdgeInsets.all(16.0), // Memperbaiki kesalahan penulisan 'padding'
+        child: SingleChildScrollView(
+          // Membungkus seluruh konten agar bisa di-scroll
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -33,33 +34,45 @@ class DetailScreen extends StatelessWidget {
 
               // Menambahkan teks "by author" sebelum gambar
               Text(
-                'by $author',  // Menampilkan nama penulis
+                'by $author', // Menampilkan nama penulis
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
               SizedBox(height: 16),
 
               // Menambahkan gambar terkait berita
               Image.asset(
-                image,  // Menggunakan gambar yang diterima dari ListScreen
+                image, // Menggunakan gambar yang diterima dari ListScreen
                 width: double.infinity,
                 height: 200,
                 fit: BoxFit.cover,
               ),
-              SizedBox(height: 16),  // Memberikan jarak setelah gambar
+              SizedBox(height: 16), // Memberikan jarak setelah gambar
 
               // Menampilkan konten lengkap dari berita
               Text(
-                content,  // Menggunakan data yang diterima dari ListScreen
+                content, // Menggunakan data yang diterima dari ListScreen
                 style: TextStyle(fontSize: 16),
               ),
-              SizedBox(height: 16),  // Menambahkan jarak antar elemen
+              SizedBox(height: 16), // Menambahkan jarak antar elemen
 
-              // Menambahkan tombol suka dan komentar
+              // Menambahkan tombol suka dan komentar (di bawah konten berita)
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  IconButton(icon: Icon(Icons.thumb_up), onPressed: () {}),
-                  IconButton(icon: Icon(Icons.comment), onPressed: () {}),
+                  IconButton(
+                    icon: Icon(Icons.thumb_up),
+                    onPressed: () {
+                      // Tambahkan logika untuk tombol Like
+                      print("Like button pressed");
+                    },
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.comment),
+                    onPressed: () {
+                      // Tambahkan logika untuk tombol Komen
+                      print("Comment button pressed");
+                    },
+                  ),
                 ],
               ),
             ],
